@@ -1,0 +1,16 @@
+<div id="accueil">
+	<div id="featuredArticle">
+		<%= link_to(@featuredArticle, class: "lien_article") do %>
+            <div class="hover"><%= image_tag(@featuredImage) %></div>
+        <% end %>
+		<p class="titreFeatured"><%= @featuredArticle.titre %></p>
+	</div>
+    <% @articles.each do |article| %>
+    	<div class="article">
+    		<%= link_to(article, class: "lien_article") do %>
+                <div class="hover"><%= image_tag(article.url_image) %></div>
+            <% end %>
+        	<p class="titres"><%= article.titre %></p>
+        </div>
+    <% end %>
+</div>

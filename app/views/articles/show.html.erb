@@ -1,0 +1,11 @@
+<div id="fiche_article">
+	<%= image_tag(@article.url_image) %>
+	<h1><%= @article.titre %><h1>
+	<span><%= @article.utilisateur.nom_utilisateur %></span>
+
+	<span><%= @article.date %></span>
+
+	<p>
+  		<%= @article.texte %>
+	</p>
+</div>

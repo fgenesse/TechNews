@@ -1,0 +1,10 @@
+<div id="articles">
+    <% @articles.each do |article| %>
+    	<div class="article">
+    		<%= link_to(article, class: "lien_article") do %>
+                <div class="hover"><%= image_tag(article.url_image) %></div>
+            <% end %>
+        	<p class="titres"><%= article.titre %></p>
+        </div>
+    <% end %>
+</div>

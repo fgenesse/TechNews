@@ -1,0 +1,22 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#fiche_article{
+	max-width: 60%;
+	margin: 0 0 0 2rem;
+
+	p{
+		font-size: 1rem;
+		font-weight: normal;
+	}
+
+	span{
+		font-size: 16px;
+		font-weight: normal;
+	}
+}
+
+#articles{
+	
+}

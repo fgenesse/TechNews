@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  texte_commentaire: MyText
+  date_commentaire: 2016-03-14
+  article_id: 
+  utilisateur_id: 
+
+two:
+  texte_commentaire: MyText
+  date_commentaire: 2016-03-14
+  article_id: 
+  utilisateur_id: 

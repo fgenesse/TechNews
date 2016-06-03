@@ -1,0 +1,8 @@
+<h1>Admin</h1>
+<% @articles.each do |article| %>
+    <p class="titres"><%= article.titre %></p>
+   	<%= link_to 'Éditer', edit_article_path(article) %>
+   	<td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'êtes-vous certains de vouloir supprimer cet article?' } %></td>
+<% end %>
+
+<%= link_to 'Nouvel article', new_article_path %>

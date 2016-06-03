@@ -1,0 +1,44 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#connexion{
+	margin: 1rem 1rem 1rem 1rem;
+
+	/*#nom, #password{
+		margin: 0.5rem 0 0 0;
+		input{
+			background-color: #FFFFFF;
+		}
+	}*/
+	.field{
+		margin-top: 1rem;
+		input{
+			background-color: #FFFFFF;
+			border-width: 1px;
+			border-style: solid;
+		}
+	}
+
+	
+
+	#login{
+		margin-top: 1rem;
+		
+		input{
+			background:none;
+			background-color: #B90504;
+  			border:none;
+  			padding: 1rem 2rem;
+  			color: white;
+
+  			&:hover{
+  				background-color: #990100;
+  			}
+		}
+	}
+}

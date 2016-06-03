@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Technews</title>
+  <%= stylesheet_link_tag    'app', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="menu"> 
+    <h1><%= link_to 'Technews', accueil_url %></h1>
+    <ul>
+      <li><%= link_to 'Articles', articles_url %></li>
+
+      <% if session[:utilisateur_id] and session[:est_auteur] %>
+        <li><%= link_to 'Admin', admin_url %></li>
+        <li><%= link_to 'Rédaction', new_article_path %></li>
+      <% elsif !session[:utilisateur_id] %>
+        <li><%= link_to 'Inscription', new_utilisateur_path %></li>
+        <li><%= link_to 'Connexion', login_url %></li>
+      <% end %>
+      
+
+      <% if session[:utilisateur_id] %>
+          <li><%= link_to 'Déconnexion', logout_path, method: :delete, :class=>'logout' %></li>
+      <% end %>
+    </ul>
+    <% if notice %>
+      <p id="notice"><%= notice %></p>
+    <% end %>
+    
+  </div>
+<%= yield %>
+
+</body>
+<footer>
+  <span>© 2016 TechNews tous droits réservés</span>
+  <span class="droite">À propos | Contact | Politique de confidentialité</span>
+</footer>
+</html>
